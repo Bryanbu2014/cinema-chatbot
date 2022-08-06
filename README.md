@@ -1,7 +1,6 @@
 # Assistant System Project - KI3, TH Deggendorf
 
 ## Table of Contents
---------------------
 * Project Title
 * Introduction
 * Version
