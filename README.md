@@ -85,8 +85,10 @@ E. Training
 -------------------
 After activated the virtual environment with the required library installed, direct to where the assistant system files are located.
 Type rasa train to start the chatbot model training.
-Example is shown below.
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa train
+Example is shown below.  
+
+(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa train  
+
 Trained models will be stored in the folder named "models".
 
 
