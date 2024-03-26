@@ -34,7 +34,7 @@ git clone <repo>
 2. Open any terminal and cd into the folder. Create a virtual environment using the following command
 
 ```bash
-python3 -m venv <venv_name>
+python<version> -m venv <venv_name>
 ```
 
 3. After the virtual environment is created, activate the virtual environment
@@ -53,7 +53,7 @@ python3 -m venv <venv_name>
 Then now install Rasa
 
 ```bash
-python -m pip install rasa==2.8.12
+python<version> -m pip install rasa==2.8.12
 ```
 
 5. Install Flask
@@ -70,13 +70,11 @@ pip install requests
 
 ### <u>Training</u>
 
-After activated the virtual environment with the required library installed, direct to where the assistant system files are located.
+> **Note: To skip the training phase, you may use the pretrained model and proceed to the usage phase.**
+
+After activated the virtual environment with the required library installed, direct to where the assistant system files `application` are located.
 Type `rasa train` to start the chatbot model training.
 Example is shown below.
-
-```bash
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa train
-```
 
 Trained models will be stored in the folder named "models".
 
@@ -85,21 +83,15 @@ Trained models will be stored in the folder named "models".
 1. Start a flask server
    After a model is trained, user is required to start a flask server before running the chatbot.
    To start a flask server, activate the virtual environment in CMD and direct to where the assistant system files are located.
-   Type startflask.bat to start flask server.
-   Example is shown below.
-   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>startflask.bat
+   Type `startflask.bat` to start flask server.
 
 2. Rasa run actions
    In a new CMD, activates the virtual environment and direct to where the assistant system files are located.
-   Type rasa run actions.
-   Example is shown below.
-   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa run actions
+   Type `rasa run actions`.
 
 3. Start the chatbot
    In a new CMD, activates the virtual environment and directs to where the assistant system files located.
-   Type rasa shell to start the chatbot.
-   Example is shown below.
-   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa shell
+   Type `rasa shell` to start the chatbot.
 
 User is expected to ask the chatbot anything related the cinema such as
 
