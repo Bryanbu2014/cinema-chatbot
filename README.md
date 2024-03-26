@@ -1,121 +1,110 @@
-# Assistant System Project - KI3, TH Deggendorf
+# Assistant System Project - KI-B-3, TH Deggendorf
 
 ## Table of Contents
-* Project Title
-* Introduction
-* Version
-* Installation
-* Training
-* Usage
 
+1. [Project Title](#project-title)
+1. [Introduction](#introduction)
+1. [Version](#version)
+1. [Installation](#installation)
+1. [Training](#training)
+1. [Usage](#usage)
 
-A. Project Title
-----------------
-Assistant system for cinema website/app
+### <u>Project Title</u>
 
+Assistant system for cinema website/application
 
-B. Introduction
----------------
+### <u>Introduction</u>
+
 An assistant system which assists user to fetch information from cinema website/app such as movie description, availability of a movie, schedule, sitting plan, etc.
 
+### <u>Version</u>
 
-C. Version
-----------
-- Python version - 3.7 or 3.8
-- Rasa version - 2.8.12
-- Flask version - 2.0.2
+- Python: 3.7 or 3.8
+- Rasa: 2.8.12
+- Flask: 2.0.2
 
+### <u>Installation</u>
 
-D. Installation
----------------
-For Windows:
-Required Python 3.7 or 3.8
+1. Clone the repository with either HTML or SSH using the command
 
-1. Download the file Rasa Projects.zip and extract it
+```bash
+git clone <repo>
+```
 
-2. Create a virtual environment
-In Command Prompt (CMD), direct to the folder named AS inside the Rasa Projects folder, and create a virtual environment inside the Cinema-Chatbot-Main folder using the following command:  
+2. Open any terminal and cd into the folder. Create a virtual environment using the following command
 
---- python3 -m venv venv ---  
+```bash
+python3 -m venv <venv_name>
+```
 
-For example, in this instance:  
+3. After the virtual environment is created, activate the virtual environment
 
---- Cinema-Chatbot\Cinema-Chatbot-Main>python3 -m venv venv ---
+```bash
+<venv_name>\Scripts\activate.bat
+```
 
-3. Activate the virtual environment
-To activate the virtual environment, type in the command line shown below.  
+4. Install Rasa
+   After the virtual environment is activated, user is requried to install Rasa. In order to have a faster and smooth installation, user is recommended to have the latest pip installed. Upgrade pip using the following command
 
---- venv\Scripts\activate.bat ---  
+```bash
+<venv_name>\Scripts\python.exe -m pip install --upgrade pip
+```
 
-For example, in this instance:  
+Then now install Rasa
 
---- Cinema-Chatbot\Cinema-Chatbot-Main>venv\Scripts\activate.bat ---
+```bash
+python -m pip install rasa==2.8.12
+```
 
-4. Install rasa
-After activated the virtual environment, user is required to install rasa. 
-In order to have a faster installation, user is recommended to have latest pip installed.
-Upgrade pip using the following command:  
+5. Install Flask
 
---- venv\Scripts\python.exe -m pip install --upgrade pip ---  
-
-For example, in this instance:  
-
-(venv) ...\Cinema-Chatbot\Cinema-Chatbot-Main>venv\Scripts\python.exe -m pip install --upgrade pip
-
-To install rasa, type in the command line shown below.  
-
---- python -m pip install rasa==2.8.12 ---  
-
-For example, in this instance:  
-
-(venv) ...\Cinema-Chatbot\Cinema-Chatbot-Main>python -m pip install rasa==2.8.12
-
-5. Install flask
-Command line shown below.  
-
---- pip install Flask==2.0.2 ---
+```bash
+pip install Flask==2.0.2
+```
 
 6. Install requests
-Command line shown below.  
 
---- pip install requests ---
+```bash
+pip install requests
+```
 
+### <u>Training</u>
 
-E. Training
--------------------
 After activated the virtual environment with the required library installed, direct to where the assistant system files are located.
-Type rasa train to start the chatbot model training.
-Example is shown below.  
+Type `rasa train` to start the chatbot model training.
+Example is shown below.
 
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa train  
+```bash
+(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa train
+```
 
 Trained models will be stored in the folder named "models".
 
+### <u>Usage</u>
 
-F. Usage
---------
 1. Start a flask server
-After a model is trained, user is required to start a flask server before running the chatbot.
-To start a flask server, activate the virtual environment in CMD and direct to where the assistant system files are located.
-Type startflask.bat to start flask server.
-Example is shown below.
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>startflask.bat
+   After a model is trained, user is required to start a flask server before running the chatbot.
+   To start a flask server, activate the virtual environment in CMD and direct to where the assistant system files are located.
+   Type startflask.bat to start flask server.
+   Example is shown below.
+   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>startflask.bat
 
 2. Rasa run actions
-In a new CMD, activates the virtual environment and direct to where the assistant system files are located.
-Type rasa run actions.
-Example is shown below.
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa run actions
+   In a new CMD, activates the virtual environment and direct to where the assistant system files are located.
+   Type rasa run actions.
+   Example is shown below.
+   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa run actions
 
 3. Start the chatbot
-In a new CMD, activates the virtual environment and directs to where the assistant system files located.
-Type rasa shell to start the chatbot.
-Example is shown below.
-(venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa shell
+   In a new CMD, activates the virtual environment and directs to where the assistant system files located.
+   Type rasa shell to start the chatbot.
+   Example is shown below.
+   (venv) ...Cinema-Chatbot\Cinema-Chatbot-Main>rasa shell
 
-User is expected to ask the chatbot anything related the cinema such as 
+User is expected to ask the chatbot anything related the cinema such as
+
 - description of a movie
 - what movie is available on a day
 - sitting plan
-- schedule of the movie 
+- schedule of the movie
 - ticket price
